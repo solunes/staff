@@ -13,15 +13,14 @@ class MasterSeeder extends Seeder {
      */
     public function run()
     {
-        $node_product_stock = \Solunes\Master\App\Node::create(['name'=>'product-stock', 'type'=>'child', 'location'=>'staff', 'parent_id'=>$node_product->id]);
-        $node_purchase = \Solunes\Master\App\Node::create(['name'=>'purchase', 'location'=>'staff', 'folder'=>'products']);
-        $node_purchase_product = \Solunes\Master\App\Node::create(['name'=>'purchase-product', 'type'=>'child', 'location'=>'staff', 'parent_id'=>$node_purchase->id]);
-        $node_staff_movement = \Solunes\Master\App\Node::create(['name'=>'staff-movement', 'location'=>'staff', 'folder'=>'products']);
-        // Usuarios
-        $admin = \Solunes\Master\App\Role::where('name', 'admin')->first();
+        $node_staff = \Solunes\Master\App\Node::create(['name'=>'staff', 'location'=>'staff', 'folder'=>'parameters']);
+        $node_staff_wage = \Solunes\Master\App\Node::create(['name'=>'staff-wage', 'location'=>'staff', 'type'=>'child', 'parent_id'=>$node_staff->id]);
+        $node_staff_payment = \Solunes\Master\App\Node::create(['name'=>'staff-payment', 'location'=>'staff', 'type'=>'child', 'parent_id'=>$node_staff->id]);
+
+        /*$admin = \Solunes\Master\App\Role::where('name', 'admin')->first();
         $member = \Solunes\Master\App\Role::where('name', 'member')->first();
         $staff_perm = \Solunes\Master\App\Permission::create(['name'=>'staff', 'display_name'=>'Negocio']);
-        $admin->permission_role()->attach([$staff_perm->id]);
+        $admin->permission_role()->attach([$staff_perm->id]);*/
 
     }
 }

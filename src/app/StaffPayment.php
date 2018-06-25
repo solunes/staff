@@ -4,9 +4,9 @@ namespace Solunes\Staff\App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class PurchaseProduct extends Model {
+class StaffPayment extends Model {
 	
-	protected $table = 'purchase_products';
+	protected $table = 'staff_payments';
 	public $timestamps = true;
     
     /* Creating rules */
@@ -44,31 +44,11 @@ class PurchaseProduct extends Model {
 	);
                         
     public function parent() {
-        return $this->belongsTo('Solunes\Staff\App\Purchase', 'parent_id');
+        return $this->belongsTo('Solunes\Staff\App\Staff', 'parent_id');
     }
                         
     public function currency() {
-        return $this->belongsTo('Solunes\Staff\App\Currency');
-    }
-
-    public function product() {
-        return $this->belongsTo('Solunes\Staff\App\Product');
-    }
-
-    public function partner() {
-        return $this->belongsTo('Solunes\Staff\App\Partner');
-    }
-
-    public function partner_transport() {
-        return $this->belongsTo('Solunes\Staff\App\Partner','partner_id');
-    }
-
-    public function pending_payment() {
-        return $this->belongsTo('Solunes\Staff\App\PendingPayment');
-    }
-
-    public function getTotalAttribute(){
-        return $this->quantity * $this->cost;
+        return $this->belongsTo('Solunes\Business\App\Currency');
     }
 
 }
