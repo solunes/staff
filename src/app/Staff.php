@@ -11,35 +11,47 @@ class Staff extends Model {
 
 	/* Creating rules */
 	public static $rules_create = array(
-		'place_id'=>'required',
-		'currency_id'=>'required',
-        'name'=>'required',
-        'type'=>'required',
+		'agency_id'=>'required',
+		'type'=>'required',
+        'status'=>'required',
+        'first_name'=>'required',
+        'last_name'=>'required',
+        'initial_date'=>'required',
 	);
 
 	/* Updating rules */
 	public static $rules_edit = array(
 		'id'=>'required',
-		'place_id'=>'required',
-        'currency_id'=>'required',
-        'name'=>'required',
+        'agency_id'=>'required',
         'type'=>'required',
+        'status'=>'required',
+        'first_name'=>'required',
+        'last_name'=>'required',
+        'initial_date'=>'required',
 	);
                         
-    public function place() {
-        return $this->belongsTo('Solunes\Business\App\Place');
+    public function agency() {
+        return $this->belongsTo('Solunes\Business\App\Agency');
     }
 
     public function user() {
         return $this->belongsTo('App\User');
     }
 
-    public function currency() {
-        return $this->belongsTo('Solunes\Business\App\Currency');
+    public function staff_years() {
+        return $this->hasMany('Solunes\Staff\App\StaffYear', 'parent_id');
     }
 
     public function staff_wages() {
         return $this->hasMany('Solunes\Staff\App\StaffWage', 'parent_id');
+    }
+
+    public function staff_schedules() {
+        return $this->hasMany('Solunes\Staff\App\StaffSchedule', 'parent_id');
+    }
+
+    public function staff_vacations() {
+        return $this->hasMany('Solunes\Staff\App\StaffVacation', 'parent_id');
     }
 
     public function staff_payments() {

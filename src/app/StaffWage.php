@@ -44,9 +44,13 @@ class StaffWage extends Model {
 	);
                         
     public function parent() {
+        return $this->belongsTo('Solunes\Staff\App\Staff');
+    }
+
+    public function staff() {
         return $this->belongsTo('Solunes\Staff\App\Staff', 'parent_id');
     }
-                        
+                    
     public function currency() {
         return $this->belongsTo('Solunes\Business\App\Currency');
     }

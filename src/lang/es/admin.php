@@ -3,21 +3,27 @@
 return array(
 
 	// MENU
-	'staff' => 'Negocio',
+	'business' => 'Negocio',
+	'parameters' => 'Parámetros',
 
 	// CUSTOM TRANS
 	'0' => 'No',
 	'1' => 'Si',
-	'central' => 'Central',
-	'customer' => 'Cliente',
-	'employee' => 'Empleado',
-	'main' => 'Principal',
-	'office' => 'Oficina',
-	'other' => 'Otro',
-	'partner' => 'Socio',
-	'secondary' => 'Secundario',
-	'storage' => 'Almacen',
-	'store' => 'Tienda',
-	'supplier' => 'Proveedor',
+	'active' => 'Activo',
+	'biweekly' => 'Quincenal',
+	'cancelled' => 'Cancelado',
+	'consultant' => 'Consultor',
+	'delayed' => 'Retrasado',
+	'external' => 'Externo',
+	'fired' => 'Despedido',
+	'intern' => 'Pasante',
+	'monthly' => 'Mensual',
+	'paid' => 'Pagado',
+	'pending' => 'Pendiente',
+	'regular' => 'Regular',
+	'resigned' => 'Resignado',
+	'retired' => 'Retirado',
+	'weekly' => 'Semanal',
+	'yearly' => 'Anual',
 
 );

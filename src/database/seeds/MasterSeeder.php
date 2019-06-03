@@ -14,8 +14,12 @@ class MasterSeeder extends Seeder {
     public function run()
     {
         $node_staff = \Solunes\Master\App\Node::create(['name'=>'staff', 'location'=>'staff', 'folder'=>'parameters']);
+        $node_staff_year = \Solunes\Master\App\Node::create(['name'=>'staff-year', 'location'=>'staff', 'type'=>'child', 'parent_id'=>$node_staff->id]);
+        $node_staff_vacation = \Solunes\Master\App\Node::create(['name'=>'staff-vacation', 'location'=>'staff', 'type'=>'child', 'parent_id'=>$node_staff->id]);
+        $node_staff_schedule = \Solunes\Master\App\Node::create(['name'=>'staff-schedule', 'location'=>'staff', 'type'=>'child', 'parent_id'=>$node_staff->id]);
         $node_staff_wage = \Solunes\Master\App\Node::create(['name'=>'staff-wage', 'location'=>'staff', 'type'=>'child', 'parent_id'=>$node_staff->id]);
         $node_staff_payment = \Solunes\Master\App\Node::create(['name'=>'staff-payment', 'location'=>'staff', 'type'=>'child', 'parent_id'=>$node_staff->id]);
+        $node_attendance = \Solunes\Master\App\Node::create(['name'=>'attendance', 'location'=>'staff', 'folder'=>'parameters']);
 
         /*$admin = \Solunes\Master\App\Role::where('name', 'admin')->first();
         $member = \Solunes\Master\App\Role::where('name', 'member')->first();
