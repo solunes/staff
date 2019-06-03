@@ -25,5 +25,12 @@ return array(
 	'retired' => 'Retirado',
 	'weekly' => 'Semanal',
 	'yearly' => 'Anual',
+	'friday' => 'Viernes',
+	'monday' => 'Lunes',
+	'saturday' => 'Sábado',
+	'sunday' => 'Domingo',
+	'thursday' => 'Jueves',
+	'tuesday' => 'Martes',
+	'wednesday' => 'Miércoles',
 
 );
