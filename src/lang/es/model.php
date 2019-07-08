@@ -9,6 +9,7 @@ return [
     |
     */
 
+    'staff-category' => 'Categoría de Empleado|Categorías de Empleados',
     'staff' => 'Empleado|Empleados',
     'staff-payment' => 'Pago de Empleado|Pagos de Empleado',
     'staff-wage' => 'Sueldo de Empleado|Sueldos de Empleado',

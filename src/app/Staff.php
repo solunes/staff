@@ -38,6 +38,10 @@ class Staff extends Model {
         return $this->belongsTo('App\User');
     }
 
+    public function staff_category() {
+        return $this->belongsTo('Solunes\Staff\App\StaffCategory');
+    }
+
     public function staff_years() {
         return $this->hasMany('Solunes\Staff\App\StaffYear', 'parent_id');
     }

@@ -54,5 +54,7 @@ return [
     'staff_vacations' => 'Vacaciones de Empleado',
     'staff_year' => 'Año de Empleado',
     'total_gained' => 'Monto Total Ganado',
+    'password' => 'Contraseña',
+    'staff_category' => 'Categoría de Empleado',
 
 ];
